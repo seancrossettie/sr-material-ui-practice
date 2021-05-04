@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './styles/index.scss';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
@@ -10,10 +11,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.Fragment>
-    <CssBaseline />
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
+    <Router>
+      <CssBaseline />
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </Router>
   </React.Fragment>,
   document.getElementById('root')
 );
